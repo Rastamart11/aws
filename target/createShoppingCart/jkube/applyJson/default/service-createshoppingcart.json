@@ -72,12 +72,12 @@
     "uid" : "90d42530-5878-44c4-b323-9bd0a3edf3c8"
   },
   "spec" : {
-    "clusterIP" : "10.106.191.130",
+    "clusterIP" : "10.100.191.130",
     "externalTrafficPolicy" : "Cluster",
     "ports" : [ {
       "name" : "sqlexec",
       "nodePort" : 31280,
-      "port" : 9088,
+      "port" : 9087,
       "protocol" : "TCP",
       "targetPort" : 9088
     } ],

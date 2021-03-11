@@ -1,0 +1,95 @@
+{
+  "apiVersion" : "v1",
+  "kind" : "Service",
+  "metadata" : {
+    "annotations" : {
+      "jkube.io/git-branch" : "master",
+      "jkube.io/git-commit" : "4513c5df17e7555c40c3b6cef5d167f9fd7b39da",
+      "jkube.io/git-url" : "https://github.com/lmejia-erpsol/patchShoppingCart.git",
+      "prometheus.io/path" : "/metrics",
+      "prometheus.io/port" : "9779",
+      "prometheus.io/scrape" : "true"
+    },
+    "creationTimestamp" : "2021-01-18T06:38:02Z",
+    "labels" : {
+      "app" : "PatchShoppingCart",
+      "group" : "com.erpsol.camel.invoke",
+      "provider" : "jkube",
+      "version" : "0.0.1-SNAPSHOT"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:annotations" : {
+            "." : { },
+            "f:jkube.io/git-branch" : { },
+            "f:jkube.io/git-commit" : { },
+            "f:jkube.io/git-url" : { },
+            "f:prometheus.io/path" : { },
+            "f:prometheus.io/port" : { },
+            "f:prometheus.io/scrape" : { }
+          },
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:externalTrafficPolicy" : { },
+          "f:ports" : {
+            "." : { },
+            "k:{\"port\":9088,\"protocol\":\"TCP\"}" : {
+              "." : { },
+              "f:name" : { },
+              "f:port" : { },
+              "f:protocol" : { },
+              "f:targetPort" : { }
+            }
+          },
+          "f:selector" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { }
+          },
+          "f:sessionAffinity" : { },
+          "f:type" : { }
+        }
+      },
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "time" : "2021-01-18T06:38:02Z"
+    } ],
+    "name" : "patchshoppingcart",
+    "namespace" : "default",
+    "resourceVersion" : "11586",
+    "selfLink" : "/api/v1/namespaces/default/services/patchshoppingcart",
+    "uid" : "ecfd8cbb-3b51-4b58-9c69-dfa6c23a0c07"
+  },
+  "spec" : {
+    "clusterIP" : "10.100.82.240",
+    "externalTrafficPolicy" : "Cluster",
+    "ports" : [ {
+      "name" : "sqlexec",
+      "nodePort" : 30276,
+      "port" : 9088,
+      "protocol" : "TCP",
+      "targetPort" : 9088
+    } ],
+    "selector" : {
+      "app" : "PatchShoppingCart",
+      "group" : "com.erpsol.camel.invoke",
+      "provider" : "jkube"
+    },
+    "sessionAffinity" : "None",
+    "type" : "LoadBalancer"
+  },
+  "status" : {
+    "loadBalancer" : { }
+  }
+}
